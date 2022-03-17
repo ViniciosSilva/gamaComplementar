@@ -1,0 +1,12 @@
+package application;
+
+import entities.Funcionario;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Funcionario func = new Funcionario("Roberto", 10, 100.0);
+
+		System.out.println(func);
+	}
+}

@@ -1,0 +1,7 @@
+INDEX VERSION 1.131+C:\CursoGama\gamaComplementar\.metadata\.plugins\org.eclipse.jdt.core
+3300135611.index
+1865797976.index
+2049612060.index
+221096330.index
+2999294537.index
+3317869279.index
