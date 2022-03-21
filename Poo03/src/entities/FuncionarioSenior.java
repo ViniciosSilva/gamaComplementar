@@ -17,24 +17,19 @@ public class FuncionarioSenior extends Funcionario {
 		this.bonus = bonus;
 	}
 
-	public double calcularBonus(double bonus, int horasTrabalhadas) {
-		int x = 0;
+	public double calcularBonus() { 
+		return (horasTrabalhadas/10) *bonus;   
+	}
+	
+	public double calcularSalario() {
+		return valorPorHora * horasTrabalhadas+calcularBonus();
+	}
 
-		while (horasTrabalhadas >= 10) {
-			x++;
-			horasTrabalhadas -= 10;
-		}
-		return bonus * x;
-	}
-	
-	@Override
-	public double calcularSalario(double valorPorHora, int horasTrabalhadas) {
-		return valorPorHora * horasTrabalhadas + calcularBonus(bonus, horasTrabalhadas);
-	}
-	
 	@Override
 	public String toString() {
-		return "Nome: "+nome+", Valor por hora: R$"+valorPorHora+", Horas trabalhadas: "+horasTrabalhadas+"Bonus adicional: R$"+calcularBonus(bonus, horasTrabalhadas)+", Salário total: R$"+calcularSalario(valorPorHora, horasTrabalhadas);
+		return "Nome: " + nome + ", Valor por hora: R$" + valorPorHora + ", Horas trabalhadas: " + horasTrabalhadas
+				+ "Bonus adicional: R$" + calcularBonus() + ", Salário total: R$"
+				+ calcularSalario();
 	}
 
 }

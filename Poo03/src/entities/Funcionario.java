@@ -36,11 +36,11 @@ public class Funcionario {
 		this.valorPorHora = valorPorHora;
 	}
 	
-	public double calcularSalario(double valorPorHora, int horasTrabalhadas) {
+	public double calcularSalario() {
 		return valorPorHora * horasTrabalhadas;
 	}
 	@Override
 	public String toString() {
-		return "Nome: "+nome+", Valor por hora: R$"+valorPorHora+", Horas trabalhadas: "+horasTrabalhadas+", Salário total: R$"+calcularSalario(valorPorHora, horasTrabalhadas);
+		return "Nome: "+nome+", Valor por hora: R$"+valorPorHora+", Horas trabalhadas: "+horasTrabalhadas+", Salário total: R$"+calcularSalario();
 	}
 }
